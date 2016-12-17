@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />		
+	</head>
+	<body>
+		<!--头部-->
+		<div id='header' class='clear'>
+			<span class='logo'>城市天气预报</span>
+			<div class='addCity clear'>
+				<div class='addBorder clear'>
+					<input type="text" placeholder='请输入城市名称' class='addCityName'/>
+				</div>
+				<input type="button" value='添加' class='addBut'/>
+			</div>
+		</div>
+		<!--天气-->
+		<div id='body'>
+			
+			<!--城市信息-->
+			<div class='cityContainer clear'>
+				<div class='cityName choose clear'>
+					<span class='cityNameWhat'>上海</span>
+					<a href="javascript:;" class='delete'>×</a>
+				</div>			
+			</div>
+			
+			<!--天气信息-->
+			<div class='cityWeather'>
+				<!--今天的时间-->
+				<div class='todayTime'></div>
+				<div class='tmpContainer clear'>
+					<!--当天的信息-->
+				</div>
+				</div>				
+			</div>
+	</div>
+		
+		<script>
+			/*设置font-size*/
+			//获取屏幕宽度
+			var width=document.body.clientWidth || document.documentElement.clientWidth;
+			//当屏幕大小为1350时，设置html的font-size为100px，其他的利用下面公式求值
+			var fontSize=100/(1350/width);
+			document.getElementsByTagName('html')[0].style.fontSize=fontSize+'px';
+		</script>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
